@@ -17,6 +17,8 @@ other_message = input("Other Message: ")
 userfield = "Username"
 passfield = "Password"
 
+
+print("Now Attempting To Login...")
 successes = []
 
 def find_csrf(html):
@@ -43,4 +45,7 @@ with open(user_path, "r") as f:
             print(" Redirect ->", r2.headers["Location"])
             if Wrong_user in r2.text:
                 successes.append(word)
+                print(word, " User: Success")
+            else:
+                print(word, "User: Failed")
         time.sleep(0.3)
