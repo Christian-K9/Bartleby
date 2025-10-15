@@ -44,9 +44,9 @@ with open(user_path, "r") as f:
         status = r2.status_code
         if "Location" in r2.headers:
             print(" Redirect ->", r2.headers["Location"])
-            if Wrong_user in r2.text:
-                successes.append(word)
-                print(word, " User: Success")
-            else:
-                print(word, "User: Failed")
+        if Wrong_user in r2.text:
+            successes.append(word)
+            print(word, " User: SUCCESS")
+        else:
+            print(word, "User: FAILED")
         time.sleep(0.3)
