@@ -58,7 +58,8 @@ with open(user_path, "r") as f:
         if Wrong_user in r2.text:
             successes.append(word)
             print("Username: ", word, " : [SUCCESS]")
-            sys.exit()
         else:    
             print("Username", word, ": [FAILED]")
         time.sleep(0.3)
+
+print("Successful Usernames:", successes)
