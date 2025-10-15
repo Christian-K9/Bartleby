@@ -7,17 +7,19 @@ import sys
 target = input("Target IP: ")
 host = input("Host Site: ")
 path = '/login.php'
+print()
 print("Path: ", path)
 change_path = input("Change Path y/n: ")
 if change_path == "y":
     path = input("New Path: ")
-path = input("Login Path: ")
 status_code = "200"
+print()
 print("Status Code: ", status_code)
 change_code = input("Change Code y/n:" )
 if change_code == "y":
     status_code = input("New Status Code")
 user_path = "/usr/share/wordlists/SecLists/Usernames/Names/names.txt" 
+print()
 print("Default User Path: ", user_path)
 change_path = input("Change Path y/n: ")
 if change_path == "y":
