@@ -48,3 +48,6 @@ if Wrong_user in r2.text:
 else:    
     print("Username", word, ": FAILED")
     time.sleep(0.3)
+
+print("Response")
+print(r2.text)
