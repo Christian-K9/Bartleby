@@ -39,6 +39,8 @@ data = {userfield: word, passfield: "x"}
 if csrf_name: data[csrf_name] = csrf_value
 r2 = sess.post(login_url, data=data, allow_redirects=False, timeout=10)
 
+print("Attempting to Connect to ", login_url)
+
 status = r2.status_code
 if "Location" in r2.headers:
     print(" Redirect ->", r2.headers["Location"])
