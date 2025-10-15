@@ -23,7 +23,7 @@ print("Now Attempting To Login...")
 successes = []
 
 def find_csrf(html):
-    print("Creating Session...")
+    #print("Creating Session...")
     m = re.search(r'<input[^>]+name=["\']?(csrf_token|csrf|token|_csrf)["\']?[^>]+value=["\']([^"\']+)["\']', html, re.I)
     return (m.group(1), m.group(2)) if m else (None, None)
     
@@ -49,6 +49,6 @@ with open(user_path, "r") as f:
             successes.append(word)
             print("Username: ", word, " : SUCCESS")
             sys.exit()
-        else:
-            print("Username", word, ": FAILED")
+        #else:    
+            #print("Username", word, ": FAILED")
         time.sleep(0.3)
