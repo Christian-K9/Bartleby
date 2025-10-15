@@ -6,17 +6,25 @@ import sys
 
 target = input("Target IP: ")
 host = input("Host Site: ")
+path = '/login.php'
+print("Path: ", path)
+change_path = input("Change Path y/n: ")
+if change_path == "y":
+    path = input("New Path: ")
 path = input("Login Path: ")
-status_code = input("Status Code: ")
+status_code = "200"
+print("Status Code: ", status_code)
+change_code = input("Change Code y/n:" )
+if change_code == "y":
+    status_code = input("New Status Code")
 user_path = "/usr/share/wordlists/SecLists/Usernames/Names/names.txt" 
 print("Default User Path: ", user_path)
 change_path = input("Change Path y/n: ")
 if change_path == "y":
     user_path = input("New User path: ")
 Wrong_user = input("Wrong User Message: ")
-other_message = input("Other Message: ")
-userfield = "Username"
-passfield = "Password"
+userfield = "username"
+passfield = "password"
 
 
 print("Now Attempting To Login...")
