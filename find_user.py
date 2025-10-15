@@ -2,6 +2,7 @@ import re
 import requests
 from urllib.parse import urljoin
 import time
+import sys
 
 target = input("Target IP: ")
 host = input("Host Site: ")
@@ -47,6 +48,7 @@ with open(user_path, "r") as f:
         if Wrong_user in r2.text:
             successes.append(word)
             print("Username: ", word, " : SUCCESS")
+            sys.exit()
         else:
             print("Username", word, ": FAILED")
         time.sleep(0.3)
