@@ -49,6 +49,6 @@ with open(user_path, "r") as f:
             successes.append(word)
             print("Username: ", word, " : SUCCESS")
             sys.exit()
-        #else:    
-            #print("Username", word, ": FAILED")
+        else:    
+            print("Username", word, ": FAILED")
         time.sleep(0.3)
